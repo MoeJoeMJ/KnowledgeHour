@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Knowledge Hour</string>
+    <string name="module_name_otp">OTP</string>
+    <string name="module_name_shared_element_transition">Shared Element Transition</string>
+    <string name="top_bar_title_knowledge_hour">Knowledge Hour</string>
 </resources>

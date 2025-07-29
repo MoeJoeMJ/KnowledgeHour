@@ -33,6 +33,8 @@ import androidx.navigation.NavHostController
 import com.moejoe.knowledgehour.R
 import com.moejoe.knowledgehour.navigation.LocalSharedTransitionScope
 import com.moejoe.knowledgehour.presentation.modules.Modules
+import com.moejoe.knowledgehour.presentation.modules.facedetection.navigateToFaceDetectionScreen
+import com.moejoe.knowledgehour.presentation.modules.expandablefab.navigateToFabAnimationScreen
 import com.moejoe.knowledgehour.presentation.modules.otp.navigateToOtpScreen
 import com.moejoe.knowledgehour.presentation.modules.sharedelementtransition.navigateToSharedElementTransitionScreen
 
@@ -51,7 +53,14 @@ fun HomeRoute(navController: NavHostController, animatedContentScope: AnimatedCo
 
             Modules.SharedElementTransition.moduleName -> {
                 navController.navigateToSharedElementTransitionScreen()
+            }
 
+            Modules.FaceDetection.moduleName -> {
+                navController.navigateToFaceDetectionScreen()
+            }
+
+            Modules.FabAnimation.moduleName -> {
+                navController.navigateToFabAnimationScreen()
             }
         }
     }
@@ -122,7 +131,9 @@ fun GridItem(
             }
         ) {
             Column(
-                modifier = Modifier.fillMaxSize().padding(16.dp),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -133,7 +144,8 @@ fun GridItem(
                         state = sharedTransitionScope.rememberSharedContentState(key = "icon_${moduleLogo}"),
                         animatedVisibilityScope = animatedContentScope)
                 )
-                Text(text = moduleName, modifier = Modifier.align(Alignment.CenterHorizontally)
+                Text(text = moduleName, modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
                     .sharedElement(
                         state = sharedTransitionScope.rememberSharedContentState(key = "name_${moduleName}"),
                         animatedVisibilityScope = animatedContentScope

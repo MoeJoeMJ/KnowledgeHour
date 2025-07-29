@@ -70,6 +70,20 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
+    // ML Kit
+    implementation(libs.face.detection)
+
+
+    // CameraX
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.camera.view)
+
+    // Compose Camera Preview
+    implementation(libs.androidx.camera.camera.view)
+
+    implementation(libs.face.detection)
+
     // Testing
     screenshotTestImplementation(libs.androidx.compose.ui.tooling)
 

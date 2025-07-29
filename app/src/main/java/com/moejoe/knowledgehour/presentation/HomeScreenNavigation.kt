@@ -4,6 +4,8 @@ import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
+import com.moejoe.knowledgehour.presentation.modules.expandablefab.fabAnimationScreen
+import com.moejoe.knowledgehour.presentation.modules.facedetection.faceDetectionScreen
 import com.moejoe.knowledgehour.presentation.modules.otp.otpScreen
 import com.moejoe.knowledgehour.presentation.modules.sharedelementtransition.sharedElementTransitionScreen
 import kotlinx.serialization.Serializable
@@ -22,6 +24,8 @@ fun NavGraphBuilder.homeScreen(
 
     otpScreen(onBackClick = navController::navigateUp)
     sharedElementTransitionScreen()
+    faceDetectionScreen()
+    fabAnimationScreen(navController = navController)
 }
 
 @Serializable

@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.3"
+aicore = "0.0.1-exp02"
 cameraCamera2 = "1.4.2"
 faceDetection = "16.1.7"
 kotlin = "2.0.0"
@@ -49,6 +50,9 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling"}
 
+#ai
+aicore = { module = "com.google.ai.edge.aicore:aicore", version.ref = "aicore" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -56,6 +60,7 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
 google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+
 
 # Testing
 screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}

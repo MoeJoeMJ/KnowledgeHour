@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.moejoe.knowledgehour"
-        minSdk = 24
+        minSdk = 31
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -86,5 +86,7 @@ dependencies {
 
     // Testing
     screenshotTestImplementation(libs.androidx.compose.ui.tooling)
+
+    implementation(libs.aicore)
 
 }

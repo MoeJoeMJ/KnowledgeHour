@@ -4,5 +4,6 @@
     <string name="module_name_shared_element_transition">Shared Element Transition</string>
     <string name="module_name_face_detection">Face Detection</string>
     <string name="module_name_fab_animation">Fab Animation</string>
+    <string name="module_name_on_device_ai">On Device AI</string>
     <string name="top_bar_title_knowledge_hour">Knowledge Hour</string>
 </resources>

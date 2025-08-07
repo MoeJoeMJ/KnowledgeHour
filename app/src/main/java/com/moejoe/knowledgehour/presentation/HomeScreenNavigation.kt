@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.moejoe.knowledgehour.presentation.modules.expandablefab.fabAnimationScreen
 import com.moejoe.knowledgehour.presentation.modules.facedetection.faceDetectionScreen
+import com.moejoe.knowledgehour.presentation.modules.ondeviceai.onDeviceAIScreen
 import com.moejoe.knowledgehour.presentation.modules.otp.otpScreen
 import com.moejoe.knowledgehour.presentation.modules.sharedelementtransition.sharedElementTransitionScreen
 import kotlinx.serialization.Serializable
@@ -26,6 +27,7 @@ fun NavGraphBuilder.homeScreen(
     sharedElementTransitionScreen()
     faceDetectionScreen()
     fabAnimationScreen(navController = navController)
+    onDeviceAIScreen(onBackPressed = navController::navigateUp)
 }
 
 @Serializable
